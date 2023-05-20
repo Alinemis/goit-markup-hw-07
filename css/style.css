@@ -140,6 +140,7 @@ img {
 }
 
 /* Header */
+
 .header {
   position: fixed;
   top: 0;
@@ -157,25 +158,56 @@ img {
   display: flex;
 }
 
-.header-nav {
+/* .header-nav {
   display: flex;
   margin-right: auto;
   align-items: center;
-}
+} */
 
 .header-logo {
+  display: block;
   padding-top: 24px;
   padding-bottom: 24px;
-  margin-right: 76px;
+  /* margin-right: 76px; */
 }
 
 .span-logo {
   color: var(--secondary-text-color);
 }
 
-.header-list {
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
   display: flex;
-  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .header-list {
+    display: none;
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-list {
+    display: flex;
+    gap: 40px;
+  }
 }
 
 .header-link {
@@ -221,9 +253,23 @@ img {
   font-style: normal;
 }
 
-.header-address-list {
-  display: flex;
-  gap: 40px;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .header-address-list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-address-list {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-address-list {
+    display: flex;
+    gap: 40px;
+  }
 }
 
 .header-contact {
@@ -428,6 +474,12 @@ img {
   background-color: var(--light-color);
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .team {
+    padding: 96px 108px;
+  }
+}
+
 @media only screen and (min-width: 1200px) {
   .team {
     padding-top: 120px;
@@ -512,6 +564,12 @@ img {
 .customers {
   padding-top: 96px;
   padding-bottom: 96px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .customers {
+    padding: 96px 108px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -602,11 +660,16 @@ img {
   background-color: var(--secondary-text-color);
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer {
+    padding: 96px 108px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .footer-conteiner {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 108px;
   }
 }
 
