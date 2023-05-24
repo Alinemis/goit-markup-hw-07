@@ -253,9 +253,14 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .header-address-list {
     display: block;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.1;
+    letter-spacing: 0.04em;
   }
 }
 
@@ -294,6 +299,7 @@ img {
 .hero {
   padding-top: 112px;
   padding-bottom: 112px;
+  margin-top: 70px;
 
   background-color: rgba(46, 47, 66, 0.7);
   max-width: 428px;
@@ -350,8 +356,8 @@ img {
 
 @media screen and (min-width: 769px) {
   .hero {
-    padding-top: 188px;
-    padding-bottom: 188px;
+    padding-top: 112px;
+    padding-bottom: 112px;
     max-width: 1440px;
     height: 600px;
 
@@ -936,20 +942,21 @@ img {
 /* portfolio */
 
 .portfolio {
-  padding-top: 118px;
+  padding-top: 48px;
   padding-bottom: 48px;
+  margin-top: 70px;
 }
 
 @media only screen and (min-width: 768px) {
   .portfolio {
-    padding-top: 136px;
+    padding-top: 64px;
     padding-bottom: 96px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .portfolio {
-    padding-top: 172px;
+    padding-top: 100px;
     padding-bottom: 120px;
   }
 }
@@ -1134,6 +1141,16 @@ img {
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--duration) var(--cubic-bezier),
     opacity var(--duration) var(--cubic-bezier);
+}
+
+@media only screen and (max-width: 427px) {
+  .modal {
+    width: 95%;
+    max-width: 392px;
+    height: 95%;
+    max-height: 584px;
+    overflow: scroll;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -1358,15 +1375,19 @@ img {
 
 .menu-container .menu-toggle {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 24px;
+  right: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   width: 24px;
   height: 24px;
+  border-radius: 50%;
   cursor: pointer;
 
-  background-color: var(--border);
-  opacity: 0.1;
-  border: 1px solid var(--secondary-text-color);
   color: var(--secondary-text-color);
 }
 
@@ -1402,12 +1423,20 @@ img {
 .mobile-tel-link {
   display: block;
   margin-bottom: 40px;
-
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--btn--logo-color);
+}
+
+@media only screen and (min-width: 428px) {
+  .mobile-tel-link {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+  }
 }
 
 .mobile-mail-link {
@@ -1421,4 +1450,10 @@ img {
 .mobile-menu-social {
   justify-content: flex-start;
   column-gap: 35px;
+}
+
+@media only screen and (min-width: 428px) {
+  .mobile-menu-social {
+    column-gap: 56px;
+  }
 }
